@@ -1,0 +1,13 @@
+En esta sección se recopilan script para el análisis comparativo entre anotaciones no compartidas por gemelos univitelinos mediante reportes obtenidos por la herramienta retroinspector. En este caso particular a partir de dos versiones del genoma T2T-CHM13v2.0 y Hg38.
+Para ello las coordenadas obtenidas por Hg38 se remapean a las coordenadas de la versión Hg38, mediante un fichero de conversión obtenido en https://hgdownload.soe.ucsc.edu/goldenPath/hs1/liftOver/hs1ToHg38.over.chain.gz
+El script RetroinspectorToBed.py genera un bed necesario que junto la herramienta liftOver, se consigue remapear a las posibles coordenadas:
+liftOver \
+  t2t_intervals.bed \
+  hs1ToHg38.over.chain.gz \
+  hg38_intervals.bed \
+  hg38_unmapped.bed
+ Dado que se esta remapeando desde una versión a una anterior existen 3 posibilidades:
+
+-Mapear perfectamente la posición del t2t en gh38.
+-Asignación a un contig alternativo.
+-No mapeom dado que para esta nueva región ensamblada no existen contigs propuesto para el Hg38.
