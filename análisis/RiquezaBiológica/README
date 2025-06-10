@@ -1,2 +1,2 @@
-En esta sección se pueden encontrar scritps enfocados en el análisis de transposición general, con el objetivo de analizar clases, cromosomas o familias con sobrerepresentación en las muestras.
-Estadistica.py: permite comparar tablas  reportadas en los análisis de realizando estadistica comparativa para dos versiones del genoma (T2T y HG38)
+ShareCompareStats: realiza un análisis de transposición general, con el objetivo de reportar metricas sobre clases, cromosomas o familias con sobrerepresentación en las muestras.
+Estadistica.py: permite comparar tablas  reportadas en los análisis de ShareCompareStats, realizando estadistica comparativa para dos versiones del genoma (T2T y HG38)
