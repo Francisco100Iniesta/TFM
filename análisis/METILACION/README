@@ -1,1 +1,2 @@
-
+En esta carpeta se puede encotrar metgraphicsgeneratorCPG.r, un script de R que analiza ficheros segmeth procendentes de metylartist. 
+Realiza estadistica comparativa entre parejas de gemelos a nivel de la fracción de metilación por cromosoma. Además, aplica filtros estrictos de filtrado para detectar islas CpG diferencialmente metiladas.
