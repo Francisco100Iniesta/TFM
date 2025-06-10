@@ -1,4 +1,4 @@
 En esta sección del repositorio se recopilan los principales scripts utilizados para los análisis realizados:
 
 - T2TvsHG38: Contiene todo el codigo necesario para iterear sobre los informes de retroinspector convertidos a .csv, generar BED para mapear coordenadas de T2T a hg38 y scripts comparativos.
--
+- Riqueza Biologica: Contiene scripts para hacer estadistica global sobre la transposición en base a multiples ficheros de resultados. Brindando información sobre clases sobrerepresentadas, familias, cromosomas, etc.
