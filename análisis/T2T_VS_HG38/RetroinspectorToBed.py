@@ -4,8 +4,8 @@ ruta = "RetroinspectorAnnotation/t2t.csv"
 nombre= os.path.splitext(os.path.basename(ruta))[0]
 dataframe = pd.read_csv(ruta, sep=";")
 """
-Este script recibe un csv con separador; construido a partir de copiar y pegar anotaciones de retroinspector 
- construyendo un bed de posiciones[start=inserccion-1][end=inserccion], id del propio informe y sustituye los cromosomas 
+Este script recibe un csv con separador; construido a partir de copiar los reportes de Retroinspector en html y pegarlos en .csv.
+ Construye un bed de posiciones[start=inserccion-1][end=inserccion], id del propio informe y sustituye los cromosomas 
  del ensamblaje t2t por los clásicos de los contigs tradicionales para el hg38.
 """
 dataframe["Position"] = dataframe["Position"].str.replace(r'\s+', '', regex=True)
