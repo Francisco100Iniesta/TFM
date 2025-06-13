@@ -1,0 +1,15 @@
+Esta  modificación permite adaptar la herramienta Retroinspector{https://github.com/javiercguard/retroinspector/tree/main}, para trabajar con la version del genoma humano T2T-CHM13v2.0, disponible en NCBI{https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_009914755.1/}. 
+
+
+MODIFICACIONES:
+
+- Sustituir el codigo que se encontraba hardcodeado (incrustado), para el el genoma hg38: Nomenclatura de cromosomas, longitudes cromosomicas.
+- Sustitución del fichero de anotaciones de elementos transponibles en el genoma T2T, para uso de la herramienta repeatmasker. Además, debido a que mantenian nomenclatura clasica de cromosomas (chr) y el genoma usaba nomenclatura Genbank(CP_), se renombraron a GenBank para evitar inconsistencias.
+-  Generación de un fichero de anotaciones. Dado que retroinspector utiliza internamente Bioconductor para realizar anotaciones de inserciones y delecciones, se propuso cambiar la referencia para T2T. Al no existir un fichero TXDB, disponible en bioconductor para el genoma T2T, se construyó de forma manual con un fichero .gff y la libreria de Rstudio makeTxDbFromGFF().
+Tras generar el TxDB, se filtro para extraer exones, intrones, promotores, etc. Esto generó un fichero .annot, necesario para que el pipeline de Retroinspector funcione en las etapas de anotación. 
+
+-NOTA: Retroinspector hacia esta construcción internamente, en mi caso es manual se necesita que dicho fichero se genere de forma manual y posteriormente se añada a la carpeta de "data".
+
+
+
+
