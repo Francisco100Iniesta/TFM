@@ -1,2 +1,5 @@
 En esta carpeta se puede encotrar metgraphicsgeneratorCPG.r, un script de R que analiza ficheros segmeth procendentes de metylartist. 
 Realiza estadistica comparativa entre parejas de gemelos a nivel de la fracción de metilación por cromosoma. Además, aplica filtros estrictos de filtrado para detectar islas CpG diferencialmente metiladas.
+
+Además, dado que se analizó metilación en regiones flanqueantes al punto de la inserción esta disponible el fichero retrobed. Este script lee el csv con ETs comunes entre una pareja, y genera un Bed para metylartist con regiones flanqueantes de análisis de 300 bases arriba y abajo respecto al punto de la inserción.
+Con el bed generado y el analisis de metilación se puede reutilizar metgraphicsgeneratorCPG.r.
