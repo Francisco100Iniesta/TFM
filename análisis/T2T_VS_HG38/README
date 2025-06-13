@@ -1,6 +1,9 @@
 En esta sección se recopilan script para el análisis comparativo entre anotaciones no compartidas por gemelos univitelinos mediante reportes obtenidos por la herramienta retroinspector. En este caso particular a partir de dos versiones del genoma T2T-CHM13v2.0 y Hg38.
 Para ello las coordenadas obtenidas por Hg38 se remapean a las coordenadas de la versión Hg38, mediante un fichero de conversión obtenido en https://hgdownload.soe.ucsc.edu/goldenPath/hs1/liftOver/hs1ToHg38.over.chain.gz
-El script RetroinspectorToBed.py genera un bed necesario que junto la herramienta liftOver, se consigue remapear a las posibles coordenadas:
+
+
+
+- El script RetroinspectorToBed.py genera un bed necesario que junto la herramienta liftOver, se consigue remapear a las posibles coordenadas:
 liftOver \
   t2t_intervals.bed \
   hs1ToHg38.over.chain.gz \
@@ -11,3 +14,7 @@ liftOver \
 -Mapear perfectamente la posición del t2t en gh38.
 -Asignación a un contig alternativo.
 -No mapeom dado que para esta nueva región ensamblada no existen contigs propuesto para el Hg38.
+
+- Tras generar un mapeo de coordenadas compatible, el script T2T_HG38-compare.py, reasigna las nuevas coordenadas cromosomicas para las inserciones de ETs a su informe original (coordenadas para T2T), de esta forma se puede comparar HG38 y T2T generando un .csv con inserciones más proximas por cromosoma y región.
+
+- El script T2T_HG38_reports, analiza la tabla comparativa generada por T2T_HG38-compare-py, realizando una valoracion de solapamientos clasificandolos clases, subclases, posicion, etc.
