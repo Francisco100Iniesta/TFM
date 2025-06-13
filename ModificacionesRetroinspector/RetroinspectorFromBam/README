@@ -8,7 +8,7 @@ MODIFICACIONES:
 
 
 ERRORES DETECTADOS:
-En las primeras ejecuciones del pipeline se detecto que en la generación de los últimos reportes de enriquecimiento funcional, uno de las librerias de R studio tenia conflicto para la generacion de un  Manhattan Plot, debido a que los datos de los datos se le facilitaban
+En las primeras ejecuciones del pipeline se detecto que en la generación de los últimos reportes de enriquecimiento funcional "report.Rmd", uno de las librerias de R studio tenia conflicto para la generacion de un  Manhattan Plot, debido a que los datos de los datos se le facilitaban
 {chrlabs = chrs %>%
   sub(pattern = "chr(.+)", replacement = "\\1", x = .) %>%
   .[. %in% as.character(unique(copy$seqnames))]} 
