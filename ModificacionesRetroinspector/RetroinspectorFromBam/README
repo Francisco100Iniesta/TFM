@@ -1,3 +1,23 @@
 Esta pequeña modificación permite adaptar la herramienta Retroinspector{https://github.com/javiercguard/retroinspector/tree/main}, para trabajar desde ficheros BAM. 
 De esta forma se evita tener que alinear ficheros originales de las lecturas, lo que supone entre (4 y 6)horas menos en tiempo de ejecución.
 
+MODIFICACIONES:
+
+- Se modifica el fichero que coordina la ejecución del pipeline (Snakefile) para que busque la carpeta "alns"(previamenete creada por el usuario), en dicha carpeta se deben indicar mediante enlaces simbolicos los ficheros .bam y .bai, con la estructura:(ln -s {ruta fichero .bam} {nombre del fichero.bam})
+- Por otra parte, el fichero de parametros de ejecución (config.yaml), se ha adaptado para que toda la construción de etiquetas de muestras y comparativa apunte a la carpeta "alns".
+
+
+ERRORES DETECTADOS:
+En las primeras ejecuciones del pipeline se detecto que en la generación de los últimos reportes de enriquecimiento funcional, uno de las librerias de R studio tenia conflicto para la generacion de un  Manhattan Plot, debido a que los datos de los datos se le facilitaban
+{chrlabs = chrs %>%
+  sub(pattern = "chr(.+)", replacement = "\\1", x = .) %>%
+  .[. %in% as.character(unique(copy$seqnames))]} 
+
+Esto generaba conflicto con la libreria que espera cromosomas por niveles numericos, entonces se cambió por un remapeo de cromosomas más rudimentario pero funcional
+{insData[, CHR := as.numeric(factor(seqnames,
+    levels = paste0("chr", c(1:22, "X", "Y")),
+    labels = c(1:22, 23, 24)
+))]
+}
+
+Por este motivo también se incluye el fichero de la carpeta SCRIPTS de retroinspector con la corrección expuesta.
