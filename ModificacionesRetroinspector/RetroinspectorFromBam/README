@@ -1,1 +1,3 @@
+Esta pequeña modificación permite adaptar la herramienta Retroinspector{https://github.com/javiercguard/retroinspector/tree/main}, para trabajar desde ficheros BAM. 
+De esta forma se evita tener que alinear ficheros originales de las lecturas, lo que supone entre (4 y 6)horas menos en tiempo de ejecución.
 
