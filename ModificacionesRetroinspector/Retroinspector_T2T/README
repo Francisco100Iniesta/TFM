@@ -10,5 +10,5 @@ MODIFICACIONES:
 -NOTA: Retroinspector realizaba esta construcción internamente, en mi caso es manual se necesita que dicho fichero se genere de forma manual y posteriormente se añada a la carpeta de "data".
 
 
-
+EN ESTE REPOSITORIO SE FACILITAN LAS CARPETAS DE SCRITPS Y RULES PARA SUSTITUIRLAS DIRECTAMENTE EN EL PIPELINE ORIGINAL. ADEMÁS, SE FACILITA EL CODIGO EN R PARA GENERAR EL FICHERO .ANNOT A PARTIR DE UN GFF DE T2T DESCARGABLE EN LA WEB DEL NCBI.
 
