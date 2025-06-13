@@ -1,0 +1,18 @@
+referenceGenome: ""
+bam_directory: "alns"
+fastq_directory: ""
+outputPath: "."
+allPrefix: "test"
+threads: 32
+
+minimumReadSupport: 3
+insertionDistanceLimitIntraPatient: 20
+insertionDistanceLimitInterPatient: 20
+survivorInsertionDistanceLimitIntraPatient: 10
+survivorInsertionDistanceLimitInterPatient: 500
+enrichmentSignificanceThreshold: 0.01
+callers: ["cuteSV", "sniffles2"]
+keepRds: true
+samples: {}
+comparisons:
+  - ["NA19240", "HG00514"]
